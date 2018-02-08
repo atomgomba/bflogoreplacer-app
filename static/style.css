@@ -1,0 +1,49 @@
+html, * {
+    font-family: sans-serif;
+}
+
+body {
+    color: #161616;
+    background-color: #fafafa;
+    font-size: 16px;
+    margin: 1.5em;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, button {
+    margin: 1em 0 1em 0;
+}
+
+fieldset input {
+    margin: .5em 0 .5em 0;
+}
+
+fieldset {
+    margin-bottom: 1em;
+}
+
+button {
+    padding: .5em;
+}
+
+figcaption {
+    font-size: 75%;
+}
+
+div.error-message {
+    padding: 1em;
+    background-color: #FFEBEE;
+    color: #C62828;
+    border: 1px solid #B71C1C;
+}

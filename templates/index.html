@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Betaflight Logo Replacer</title>
+    <link rel="stylesheet" href="{{ static_url('style.css') }}">
+    {% if recaptcha is not None %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% end %}
+</head>
+<body>
+<h1>Betaflight Logo Replacer</h1>
+
+{% if error is not None %}
+<div class="error-message">{{ error }}</div>
+{% end %}
+
+<form action="." method="POST" enctype="multipart/form-data">
+    <label>Source image
+        <input name="srcimg" type="file" accept="image/png,image/bmp" required>
+    </label>
+    <fieldset>
+        <legend>Base OSD Font</legend>
+        {% for name in font_names %}
+        <label>
+            <input
+                    type="radio"
+                    name="font"
+                    value="{{ name }}"
+                    required{% if name== selected_font %}
+                    checked{% end %}> {{ name }}
+        </label>
+        {% end %}
+    </fieldset>
+
+    {% if recaptcha is not None %}
+    <div class="g-recaptcha" data-sitekey="{{ recaptcha['sitekey'] }}"></div>
+    {% end %}
+
+    <button type="submit">Generate</button>
+</form>
+
+<p><a href="{{ static_url('help.html') }}">More info here</a></p>
+</body>
+</html>

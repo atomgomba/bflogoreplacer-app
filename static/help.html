@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help - Betaflight Logo Replacer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1><a href="..">Betaflight Logo Replacer</a></h1>
+
+<h2>Description</h2>
+
+<p>This tool can replace the logo in an OSD font file for <a
+        href="https://github.com/betaflight/betaflight">Betaflight</a>. Just select the base font and your custom image,
+    submit the form, then upload the resulting font file to your FC.</p>
+
+<h2>Source image restrictions</h2>
+
+<ul>
+    <li>image has to be exactly 288px×72px</li>
+    <li>the best to use PNG or BMP format</li>
+    <li>background must be full green (#00ff00)</li>
+    <li>must use white and black colors only</li>
+    <li>it's better to use RGB mode than RGBA (alpha is ignored anyway)</li>
+    <li>green areas will be transparent on the OSD</li>
+</ul>
+
+<h2>Samples</h2>
+
+<figure>
+    <img src="samples/osd-logo-template.png" alt="Custom OSD logo template">
+    <figcaption>Custom OSD logo template (<a href="samples/osd-logo-template.png">download</a>)</figcaption>
+</figure>
+
+<figure>
+    <img src="samples/kiri-osd-logo.png" alt="My custom logo image">
+    <figcaption>My custom logo image (<a href="samples/kiri-osd-logo.png">download</a>)</figcaption>
+</figure>
+
+<figure>
+    <img src="samples/kiri-osd-font.png" alt="My custom logo font based on digital font">
+    <figcaption>My custom logo font based on digital font (<a href="samples/kiri-digital.mcm">download</a>)</figcaption>
+</figure>
+
+<figure>
+    <img src="samples/kiri-logo-snapshot.png" alt="DVR snapshot of the generated font in use">
+    <figcaption>DVR snapshot of the generated font in use (<a href="samples/kiri-logo-snapshot.png">download</a>)
+    </figcaption>
+</figure>
+
+<h2>About this web app</h2>
+
+<p>This web app is based on my Python3 module <a href="https://github.com/atomgomba/bflogoreplacer">bflogoreplacer</a>
+    which is released under the GPLv3 license.
+    Betaflight OSD fonts are not part of its repository, but mirrored from the <a href="https://github.com/betaflight/betaflight-configurator">Configurator</a>'s repo.
+    The source code for this app can be found on <a href="https://github.com/atomgomba/bflogoreplacer-app">GitHub</a> and is released under the GPLv3 license.</p>
+
+</body>
+</html>

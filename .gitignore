@@ -1,0 +1,9 @@
+/.idea
+/venv
+/static/fonts
+__pycache__
+*.mcm
+!/static/samples/*
+/recaptcha.cfg
+/app.key
+/app.crt
