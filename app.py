@@ -162,9 +162,10 @@ def main(args):
 
 if __name__ == "__main__":
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--no-ssl", action="store_true")
-    parser.add_argument("-p", "--port", type=int, default=8720)
-    parser.add_argument("-s", "--host", type=str, default="0.0.0.0")
-    parser.add_argument("-v", dest="verbosity", action="count", default=0)
-    parser.add_argument("-d", "--debug", action="store_true")
+    parser.add_argument("--no-ssl", action="store_true", help="disable SSL support")
+    parser.add_argument("-p", "--port", type=int, default=8720, help="server port")
+    parser.add_argument("-s", "--host", metavar="ADDR", type=str, default="0.0.0.0", help="host address")
+    parser.add_argument("-v", dest="verbosity", action="count", default=0,
+                        help="verbosity level, can be used multiple times")
+    parser.add_argument("-d", "--debug", action="store_true", help="enable debug mode and autoreload")
     main(parser.parse_args())
