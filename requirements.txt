@@ -1,4 +1,4 @@
-bflogoreplacer==0.1.2
+bflogoreplacer==0.2.0
 Pillow==5.0.0
 pkg-resources==0.0.0
 tornado==4.5.3

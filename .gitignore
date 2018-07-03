@@ -1,7 +1,10 @@
 /.idea
+/.vscode
+/env
 /venv
 /static/fonts
 __pycache__
+*.pyc
 *.mcm
 !/static/samples/*
 /recaptcha.cfg

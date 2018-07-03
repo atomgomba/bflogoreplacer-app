@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Betaflight Logo Replacer</title>
     <link rel="stylesheet" href="{{ static_url('style.css') }}">
-    {% if recaptcha is not None %}
+    {% if recaptcha %}
     <script src='https://www.google.com/recaptcha/api.js'></script>
     {% end %}
 </head>
@@ -33,13 +33,15 @@
         {% end %}
     </fieldset>
 
-    {% if recaptcha is not None %}
+    {% if recaptcha %}
     <div class="g-recaptcha" data-sitekey="{{ recaptcha['sitekey'] }}"></div>
     {% end %}
 
     <button type="submit">Generate</button>
+
+    {% module xsrf_form_html() %}
 </form>
 
-<p><a href="{{ static_url('help.html') }}">More info here</a></p>
+<p><a href="{{ static_url('help.html', include_version=False) }}">More info here</a></p>
 </body>
 </html>
